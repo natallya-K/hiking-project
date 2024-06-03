@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Sono:wght@200..800&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-icons {
+    color: white ;
+    font-size: 1rem;
+}
+
+.header-wrapper {
+    @apply flex justify-between py-3 px-10 select-none;
+}
+
+.homeHeader.header-wrapper {
+    /*@apply bg-secondary-200;*/
+    .logo {
+        @apply uppercase font-vollkorn text-customWhite font-extrabold text-xl
+    }
+}
+
+.header.header-wrapper {
+    .logo {
+        @apply uppercase font-vollkorn text-primary-200 font-extrabold text-3xl;
+    }
+    a {
+        @apply text-primary-200;
+    }
+}
+
+.links {
+    @apply flex space-x-5;
+    a{
+        @apply  uppercase text-customWhite text-xs hover:text-accent active:text-primary-200;
+    }
+}
+
+.hikesInfosBar {
+    @apply flex flex-wrap gap-1 my-3 text-xs;
+    .hikesInfo {
+       @apply flex justify-center items-center;
+        span {
+            @apply mr-0.5;
+        }
+    }
+}
+
+.hikesTagsBar {
+    @apply flex w-11/12 overflow-x-scroll justify-center gap-4 mt-3 text-xs scrollbar-none;
+    .hikesTag {
+        @apply flex justify-center items-center text-secondary-100 bg-customWhite py-1 px-2 rounded-full;
+    }
+
+}
+
+.tagsButton {
+    @apply h-fit w-fit px-1 py-1 bg-secondary-200 rounded-full hover:bg-primary-50 active:bg-secondary-50 shadow select-none;
+    span {
+     @apply flex w-7 justify-around ;
+    }
+
+
+}
+
+.pages {
+    ul {
+        @apply flex gap-5 my-6  bg-white p-2 rounded-full shadow-sm;
+        li {
+            a {
+                @apply flex bg-customWhite rounded-full w-5 h-5 text-xs text-primary-100 hover:bg-primary-200 active:bg-secondary-100 active:bg-primary-50;
+                span {
+                    @apply  m-auto;
+
+                }
+            }
+        }
+    }
+}
+
+.authForm {
+    @apply flex flex-col justify-center items-center bg-white p-7 rounded-2xl shadow-sm text-xs;
+}
+
+.authLabel {
+    @apply text-secondary-100;
+}
+
+.authFormSection {
+    @apply w-full flex flex-col gap-1 mb-3 ;
+
+    .authFormField {
+        @apply bg-customWhite  text-primary-100 placeholder-customWhite p-5 rounded-lg py-1 px-5 ;
+    }
+}
+
+.authLinks {
+    @apply flex gap-3 ;
+
+    a {
+        @apply text-secondary-50;
+    }
+}
+
+.authButton {
+    @apply bg-secondary-300 text-customWhite rounded-full mt-3 py-1 px-5 w-fit hover:bg-primary-100 active:bg-secondary-50;
+}
+
+.notification {
+    @apply bg-secondary-200 text-white px-3 py-1 mb-2 rounded-lg text-xs italic text-center;
+}
